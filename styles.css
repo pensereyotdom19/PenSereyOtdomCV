@@ -451,3 +451,23 @@ html[data-theme="light"] .cursor-glow { background: radial-gradient(circle, rgba
 
 .hero-editorial::before { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 3.5rem 3.5rem; border: 0; content: ""; display: block; height: 100%; inset: 0; mask-image: radial-gradient(ellipse at 30% 35%, #000 0, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 35%, #000 0, transparent 70%); opacity: .55; pointer-events: none; position: absolute; right: auto; top: 0; width: 100%; z-index: 0; }
 @media (max-width: 64rem) { .hero-actions { flex-wrap: wrap !important; } }
+
+/* Contact card */
+.contact-section { align-items: center; border: 1px solid var(--line); border-radius: 1.5rem; display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); margin: 3rem var(--side) 4rem; overflow: hidden; padding: clamp(2rem, 5vw, 4rem); }
+html[data-theme="dark"] .contact-section { box-shadow: 0 0 0 1px var(--line), 0 0 4rem var(--glow); }
+.contact-section h2 { font-size: clamp(2.2rem, 4.6vw, 3.8rem); letter-spacing: -.045em; line-height: 1.02; margin-bottom: 1rem; max-width: 15ch; }
+.contact-lede { color: #cad7e8; font-size: 1.05rem; margin: 0; max-width: 30rem; }
+.contact-section .contact-actions { margin-top: 1.8rem; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { align-items: baseline; border-top: 1px solid rgba(255, 255, 255, .16); display: grid; gap: 1rem; grid-template-columns: 5.5rem minmax(0, 1fr); padding: 1rem 0; }
+.contact-list li:last-child { border-bottom: 1px solid rgba(255, 255, 255, .16); }
+.contact-list span:first-child { color: #9fc1ff; font-size: .7rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.contact-list a, .contact-list b { color: #fff; font-size: 1rem; font-weight: 650; overflow-wrap: normal; text-decoration: none; }
+.contact-list li { grid-template-columns: 5rem minmax(0, 1fr); }
+.contact-list li:first-child a { font-size: clamp(.86rem, 1.5vw, 1rem); white-space: nowrap; }
+.contact-list a:hover { color: #9fc1ff; text-decoration: underline; text-underline-offset: .25em; }
+@media (max-width: 56rem) {
+  .contact-section { grid-template-columns: 1fr; margin-top: 2rem; }
+  .contact-section h2 { max-width: none; }
+}
+@media (max-width: 30rem) { .contact-list li { grid-template-columns: 1fr; gap: .2rem; } }
