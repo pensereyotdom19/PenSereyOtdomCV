@@ -490,3 +490,8 @@ html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg
 .profile-photo { aspect-ratio: 4 / 5; filter: none; mix-blend-mode: normal; object-position: center 8%; transform: none; }
 .hero-profile { justify-self: end; max-width: 24rem; width: 100%; }
 @media (max-width: 48rem) { .hero-profile { justify-self: stretch; max-width: 26rem; } }
+
+/* Headshot: soft blue backdrop, kept sharp */
+.profile-photo-wrap, html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg, #f4f8ff 0, #cfe0ff 100%); isolation: isolate; }
+.profile-photo { mix-blend-mode: multiply; }
+.profile-photo-wrap::after { display: block; height: 7%; }
