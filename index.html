@@ -27,8 +27,8 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
+      <section class="hero hero-editorial" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy hero-identity">
           <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> Open to backend opportunities · Phnom Penh, Cambodia</p>
           <h1 id="hero-title">Pen Serey<br />Otdom<span>.</span></h1>
           <p class="hero-role">Backend-focused Software Engineer building <strong>reliable APIs</strong>, <strong>business workflows</strong>, and web applications with Python and Django REST Framework.</p>
@@ -39,18 +39,15 @@
             <a class="button button-secondary" href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Professional summary">
+        <aside class="hero-panel hero-profile" aria-label="Professional summary">
           <div class="profile-photo-wrap">
             <img class="profile-photo" src="pen-serey-otdom-headshot.jpeg" alt="Pen Serey Otdom" />
           </div>
-          <p class="panel-label">Specialism</p>
-          <p class="panel-value">Backend / Python / Django REST Framework</p>
-          <div class="panel-rule"></div>
-          <p class="panel-label">Experience</p>
-          <p class="panel-value">6+ years building web applications</p>
-          <div class="panel-rule"></div>
-          <p class="panel-label">Based in</p>
-          <p class="panel-value">Phnom Penh, Cambodia</p>
+          <div class="profile-facts">
+            <div class="profile-fact"><p class="panel-label">Specialism</p><p class="panel-value">Backend / Python / Django REST Framework</p></div>
+            <div class="profile-fact"><p class="panel-label">Experience</p><p class="panel-value">6+ years building web applications</p></div>
+            <div class="profile-fact"><p class="panel-label">Based in</p><p class="panel-value">Phnom Penh, Cambodia</p></div>
+          </div>
         </aside>
       </section>
 
@@ -105,7 +102,7 @@
         <div class="section-label">03 / Experience</div>
         <div class="section-body">
           <h2 id="experience-title">Professional experience</h2>
-          <ol class="timeline">
+          <ol class="timeline experience-ledger">
             <li class="timeline-entry">
               <div class="timeline-meta"><span>May 2022 – Present</span><span>Phnom Penh, Cambodia</span></div>
               <div>
@@ -127,13 +124,13 @@
       <section class="section projects-section" id="projects" aria-labelledby="projects-title">
         <div class="section-label">04 / Selected projects</div>
         <div class="section-body">
-          <div class="section-heading"><h2 id="projects-title">Backend work, explained clearly.</h2><p>High-level case studies show the problem area, engineering focus, and technology without exposing sensitive implementation or company details.</p></div>
+          <div class="section-heading section-intro"><h2 id="projects-title">Backend work, explained clearly.</h2><p>High-level case studies show the problem area, engineering focus, and technology without exposing sensitive implementation or company details.</p></div>
           <div class="project-grid">
             <article class="project-card project-card-featured">
               <div class="project-topline"><span class="project-index">Featured case study</span><span>Hotel management system</span></div>
               <h3>SuiteBook</h3>
               <p class="project-featured-summary">A hotel management system supporting the operational workflows behind bookings, guests, settlement, and payments.</p>
-              <div class="case-study case-study-lens">
+              <div class="case-study case-study-lens suitebook-case-study">
                 <div><span>Context</span><p>Hotel-management workflows for booking, guest, and account operations.</p></div>
                 <div><span>Engineering focus</span><p>Python and Django REST Framework backend features, REST APIs, business logic, payment workflows, and React.js interfaces.</p></div>
                 <div><span>Core capabilities</span><p>Room booking, guest management, IC card activation, account settlement, kiosk payment, and QR payment handling.</p></div>
