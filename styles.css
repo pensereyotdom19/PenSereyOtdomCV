@@ -341,9 +341,6 @@ footer { border-color: var(--line); }
 
 /* Theme, stats, and stack strip */
 :root { --panel: #10253f; color-scheme: light; }
-.theme-toggle { align-items: center; background: transparent; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); cursor: pointer; display: inline-flex; font: inherit; font-size: .78rem; font-weight: 800; gap: .45rem; padding: .5rem .8rem; }
-.theme-toggle:hover { border-color: var(--accent); }
-.theme-icon { background: linear-gradient(90deg, currentColor 50%, transparent 50%); border: 2px solid currentColor; border-radius: 999px; height: .85rem; width: .85rem; }
 
 .hero-stats { border-top: 1px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: repeat(3, auto); justify-content: start; margin: 2.2rem 0 0; padding-top: 1.3rem; }
 .hero-stats div { margin: 0; }
@@ -384,7 +381,6 @@ html[data-theme="dark"] .hero-editorial::before { border-color: var(--line); }
   .hero-stats { gap: 1rem; }
   .hero-stats dt { font-size: 1.6rem; }
   .stack-strip { padding-bottom: 1rem; padding-top: 1rem; }
-  .theme-toggle .theme-text { display: none; }
 }
 
 /* Tech-forward dark-blue refresh */
@@ -442,7 +438,6 @@ html[data-theme="dark"] .contact-section::after { display: none; }
 /* Cursor glow, card spotlight, hero grid */
 .cursor-glow { background: radial-gradient(circle, color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%); height: 36rem; left: 0; opacity: 0; pointer-events: none; position: fixed; top: 0; transition: opacity .3s ease; width: 36rem; z-index: 1; }
 html.has-glow .cursor-glow { opacity: 1; }
-html[data-theme="light"] .cursor-glow { background: radial-gradient(circle, rgba(21, 86, 192, .08), transparent 65%); }
 @media (hover: none), (prefers-reduced-motion: reduce) { .cursor-glow { display: none; } }
 
 .skill-group, .backend-pillars article, .project-card:not(.project-index-grid .project-card) { position: relative; }
@@ -476,7 +471,6 @@ html[data-theme="dark"] .contact-section { box-shadow: 0 0 0 1px var(--line), 0 
 .profile-photo-wrap { background: linear-gradient(180deg, #f3f7ff 0, #d3e2ff 100%); isolation: isolate; }
 .profile-photo { mix-blend-mode: multiply; filter: contrast(1.04) saturate(1.02); object-position: center 10%; }
 .profile-photo-wrap::after { background: linear-gradient(180deg, transparent 0, var(--panel) 100%); bottom: 0; content: ""; height: 28%; left: 0; pointer-events: none; position: absolute; right: 0; }
-html[data-theme="light"] .profile-photo-wrap::after { background: linear-gradient(180deg, transparent 0, #10253f 100%); }
 html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg, #e6efff 0, #b9d1ff 100%); }
 .profile-photo-wrap { overflow: hidden; }
 .profile-photo { transform: scale(1.2); transform-origin: 50% 22%; }
