@@ -438,3 +438,16 @@ html[data-theme="dark"] .contact-section::after { display: none; }
   .hero-editorial h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
   .backend-pillars { padding-top: 1.5rem; }
 }
+
+/* Cursor glow, card spotlight, hero grid */
+.cursor-glow { background: radial-gradient(circle, color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%); height: 36rem; left: 0; opacity: 0; pointer-events: none; position: fixed; top: 0; transition: opacity .3s ease; width: 36rem; z-index: 1; }
+html.has-glow .cursor-glow { opacity: 1; }
+html[data-theme="light"] .cursor-glow { background: radial-gradient(circle, rgba(21, 86, 192, .08), transparent 65%); }
+@media (hover: none), (prefers-reduced-motion: reduce) { .cursor-glow { display: none; } }
+
+.skill-group, .backend-pillars article, .project-card:not(.project-index-grid .project-card) { position: relative; }
+.skill-group::before, .backend-pillars article::before, .project-card-featured::before { background: radial-gradient(18rem circle at var(--cx, 50%) var(--cy, 50%), color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%); border-radius: inherit; content: ""; inset: 0; opacity: 0; pointer-events: none; position: absolute; transition: opacity .25s ease; }
+.skill-group:hover::before, .backend-pillars article:hover::before, .project-card-featured:hover::before { opacity: 1; }
+
+.hero-editorial::before { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 3.5rem 3.5rem; border: 0; content: ""; display: block; height: 100%; inset: 0; mask-image: radial-gradient(ellipse at 30% 35%, #000 0, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 35%, #000 0, transparent 70%); opacity: .55; pointer-events: none; position: absolute; right: auto; top: 0; width: 100%; z-index: 0; }
+@media (max-width: 64rem) { .hero-actions { flex-wrap: wrap !important; } }

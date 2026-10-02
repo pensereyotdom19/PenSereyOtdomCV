@@ -66,3 +66,32 @@ if (themeToggle) {
     render();
   });
 }
+
+if (window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches) {
+  const root = document.documentElement;
+  const glow = document.querySelector('.cursor-glow');
+  let frame = 0;
+  let x = 0;
+  let y = 0;
+  const cards = '.skill-group, .backend-pillars article, .project-card, .stat-card';
+
+  document.addEventListener('pointermove', (event) => {
+    x = event.clientX;
+    y = event.clientY;
+    if (frame) return;
+    frame = requestAnimationFrame(() => {
+      frame = 0;
+      root.classList.add('has-glow');
+      if (glow) glow.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    });
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => root.classList.remove('has-glow'));
+
+  document.addEventListener('pointermove', (event) => {
+    const card = event.target.closest && event.target.closest(cards);
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--cx', `${event.clientX - rect.left}px`);
+    card.style.setProperty('--cy', `${event.clientY - rect.top}px`);
+  }, { passive: true });
+}
