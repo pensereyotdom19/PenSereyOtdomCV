@@ -386,3 +386,55 @@ html[data-theme="dark"] .hero-editorial::before { border-color: var(--line); }
   .stack-strip { padding-bottom: 1rem; padding-top: 1rem; }
   .theme-toggle .theme-text { display: none; }
 }
+
+/* Tech-forward dark-blue refresh */
+:root { --accent-2: #0e8bb5; --glow: rgba(21, 86, 192, .16); }
+html[data-theme="dark"] {
+  --bg: #060d1f; --bg-deep: #0a1530; --surface: #0b1530; --surface-soft: #0f1d3d; --panel: #0c1833;
+  --ink: #eaf1ff; --muted: #9db2d6; --line: rgba(90, 140, 255, .22);
+  --accent: #4d8dff; --accent-bright: #4d8dff; --accent-2: #38d5ff; --glow: rgba(77, 141, 255, .2);
+}
+html[data-theme="dark"] body { background: radial-gradient(ellipse at 15% 0%, rgba(77, 141, 255, .16), transparent 38rem), radial-gradient(ellipse at 95% 12%, rgba(56, 213, 255, .09), transparent 30rem), var(--bg); }
+html[data-theme="dark"] .site-header { background: rgba(6, 13, 31, .82); }
+
+.status-pill { align-items: center; background: color-mix(in srgb, var(--success) 12%, transparent); border: 1px solid color-mix(in srgb, var(--success) 40%, transparent); border-radius: 999px; color: var(--success) !important; display: inline-flex; font-size: .7rem; gap: .2rem; margin-bottom: 1.6rem; padding: .4rem .85rem; }
+html[data-theme="dark"] .status-pill { --success: #4be3a4; }
+.hero-identity::before { display: none; }
+.hero-hi { color: var(--muted); font-size: 1.05rem; margin-bottom: .6rem; }
+.hero-hi strong { color: var(--ink); }
+.hero-editorial h1 { font-family: var(--body); font-size: clamp(3.6rem, 9vw, 7.4rem); font-weight: 800; letter-spacing: -.055em; line-height: .95; margin-bottom: 1.6rem; }
+.h1-line { display: block; }
+.h1-accent { background: linear-gradient(95deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: .08em; }
+.h1-accent span { color: var(--accent-2); -webkit-text-fill-color: var(--accent-2); }
+.hero-editorial { align-items: center; grid-template-columns: minmax(0, 1.5fr) minmax(14rem, .5fr); }
+.hero-editorial::before { display: none; }
+.hero-profile { border-radius: 1.25rem; box-shadow: 0 0 0 1px var(--line), 0 0 3.5rem var(--glow); }
+.hero-role { font-size: clamp(1.1rem, 1.7vw, 1.35rem); }
+.hero-stats dt { font-family: var(--body); font-weight: 800; color: var(--accent); }
+
+.button { border-radius: .75rem; }
+.header-cv { border-radius: .6rem; }
+
+/* glow cards */
+.backend-pillars { background: transparent; border: 0; border-radius: 0; gap: 1rem; margin: 0; padding: 2.5rem var(--side) 0; }
+.backend-pillars article, .backend-pillars article + article { background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.skill-group, .skill-group:nth-child(even) { background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; padding: 1.5rem; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.skills-grid { gap: 1rem; }
+.skill-group li { background: color-mix(in srgb, var(--accent) 9%, transparent); border: 1px solid var(--line); border-radius: .5rem; color: var(--ink); padding: .28rem .6rem; }
+.backend-pillars article:hover, .skill-group:hover { border-color: var(--accent); box-shadow: 0 0 2rem var(--glow); transform: translateY(-2px); }
+.project-card-featured { border-radius: 1.25rem; box-shadow: 0 0 0 1px var(--line), 0 0 4rem var(--glow); }
+.project-card-featured::after { border-color: var(--line); }
+.stack-strip { border-color: var(--line); }
+.stack-strip li { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+.about-copy { border-left-color: var(--accent); }
+.section-body h2 { font-family: var(--body); font-weight: 800; letter-spacing: -.045em; }
+.about-highlights p, .project-index-grid .project-card h3, .timeline-entry h3, .education-card h2 { font-family: var(--body); font-weight: 750; letter-spacing: -.025em; }
+.contact-section h2 { font-family: var(--body); font-weight: 800; letter-spacing: -.05em; }
+html[data-theme="dark"] .project-card-featured, html[data-theme="dark"] .hero-profile { background: var(--panel); }
+html[data-theme="dark"] .contact-section { background: linear-gradient(135deg, #0d2250, #060d1f 70%); }
+html[data-theme="dark"] .contact-section::after { display: none; }
+
+@media (max-width: 48rem) {
+  .hero-editorial h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
+  .backend-pillars { padding-top: 1.5rem; }
+}
