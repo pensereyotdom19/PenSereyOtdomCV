@@ -338,3 +338,51 @@ footer { border-color: var(--line); }
 .suitebook-case-study > div:nth-child(3) { grid-column: 1 / -1; }
 .hero-actions .button { padding: .8rem 1rem; }
 @media (min-width: 48.01rem) { .hero-actions { flex-wrap: nowrap; } .hero-actions .button { font-size: .88rem; white-space: nowrap; } }
+
+/* Theme, stats, and stack strip */
+:root { --panel: #10253f; color-scheme: light; }
+.theme-toggle { align-items: center; background: transparent; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); cursor: pointer; display: inline-flex; font: inherit; font-size: .78rem; font-weight: 800; gap: .45rem; padding: .5rem .8rem; }
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-icon { background: linear-gradient(90deg, currentColor 50%, transparent 50%); border: 2px solid currentColor; border-radius: 999px; height: .85rem; width: .85rem; }
+
+.hero-stats { border-top: 1px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: repeat(3, auto); justify-content: start; margin: 2.2rem 0 0; padding-top: 1.3rem; }
+.hero-stats div { margin: 0; }
+.hero-stats dt { font-family: var(--display); font-size: 2rem; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
+.hero-stats dd { color: var(--muted); font-size: .8rem; margin: .3rem 0 0; }
+
+.stack-strip { align-items: center; border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; margin: 0; padding: 1.1rem var(--side); }
+.stack-label { color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.stack-strip ul { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; margin: 0; padding: 0; }
+.stack-strip li { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem; padding: .3rem .7rem; }
+.backend-pillars { border-top: 0; }
+
+html[data-theme="dark"] {
+  --bg: #0a1120; --bg-deep: #0f1a2e; --surface: #101a2d; --surface-soft: #14213a;
+  --ink: #e9eff9; --muted: #a3b4cc; --line: rgba(160, 190, 235, .17);
+  --accent: #5b97ff; --accent-bright: #5b97ff; --panel: #13223c;
+  --shadow: 0 1.35rem 3.5rem rgba(0, 0, 0, .45); color-scheme: dark;
+}
+html[data-theme="dark"] body { background: radial-gradient(circle at 94% 6%, rgba(91, 151, 255, .16), transparent 30rem), linear-gradient(180deg, #0c1527 0, var(--bg) 45rem); }
+html[data-theme="dark"] .site-header { background: rgba(10, 17, 32, .86); border-bottom-color: var(--line); }
+html[data-theme="dark"] .header-cv, html[data-theme="dark"] .button-primary { background: var(--accent); box-shadow: 0 .45rem 1.2rem rgba(91, 151, 255, .22); color: #06122a; }
+html[data-theme="dark"] .header-cv:hover, html[data-theme="dark"] .button-primary:hover { background: #86b2ff; color: #06122a; }
+html[data-theme="dark"] .hero-profile, html[data-theme="dark"] .project-card-featured { background: var(--panel); border: 1px solid var(--line); }
+html[data-theme="dark"] .project-card-featured:hover { background: var(--panel); }
+html[data-theme="dark"] .pillar-number { background: #1d3a66; color: #d6e4ff; }
+html[data-theme="dark"] .backend-pillars { background: rgba(16, 26, 45, .6); }
+html[data-theme="dark"] .contact-section { background: var(--panel); border-top: 1px solid var(--line); }
+html[data-theme="dark"] .contact-section::after { background: linear-gradient(135deg, rgba(91, 151, 255, .22), transparent 62%); }
+html[data-theme="dark"] .contact-section .button-secondary:hover { color: #0a1120; }
+html[data-theme="dark"] .button-secondary:hover { background: var(--surface-soft); }
+html[data-theme="dark"] .skill-group li { border-bottom-color: var(--line); }
+html[data-theme="dark"] .project-card { background: var(--surface); }
+html[data-theme="dark"] .project-index-grid .project-card, html[data-theme="dark"] .project-index-grid .project-card + .project-card { background: transparent; }
+html[data-theme="dark"] .project-index-grid .project-card:hover { background: var(--surface); }
+html[data-theme="dark"] .hero-editorial::before { border-color: var(--line); }
+
+@media (max-width: 48rem) {
+  .hero-stats { gap: 1rem; }
+  .hero-stats dt { font-size: 1.6rem; }
+  .stack-strip { padding-bottom: 1rem; padding-top: 1rem; }
+  .theme-toggle .theme-text { display: none; }
+}

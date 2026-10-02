@@ -49,3 +49,20 @@ if (copyEmailButton) {
     }
   });
 }
+
+const themeToggle = document.querySelector('#theme-toggle');
+if (themeToggle) {
+  const root = document.documentElement;
+  const render = () => {
+    const dark = root.dataset.theme !== 'light';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('aria-label', dark ? 'Dark theme, switch to light' : 'Light theme, switch to dark');
+    themeToggle.querySelector('.theme-text').textContent = dark ? 'Dark' : 'Light';
+  };
+  render();
+  themeToggle.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch {}
+    render();
+  });
+}

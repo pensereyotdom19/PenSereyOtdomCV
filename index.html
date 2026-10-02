@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Professional portfolio of Pen Serey Otdom, a Software Engineer focused on Python, Django REST Framework, and backend systems." />
     <title>Pen Serey Otdom | Backend Software Engineer</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   </head>
@@ -21,6 +22,7 @@
         <a data-section-link href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="true" aria-label="Dark theme"><span class="theme-icon" aria-hidden="true"></span><span class="theme-text">Dark</span></button>
         <a class="header-cv" href="PenSereyOtdom.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false"><span class="sr-only">Open navigation</span><span aria-hidden="true">Menu</span></button>
       </div>
@@ -38,6 +40,11 @@
             <a class="button button-secondary" href="#projects">View selected work <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
+          <dl class="hero-stats" aria-label="Career summary">
+            <div><dt>6+</dt><dd>Years of experience</dd></div>
+            <div><dt>2</dt><dd>Companies</dd></div>
+            <div><dt>6</dt><dd>Projects</dd></div>
+          </dl>
         </div>
         <aside class="hero-panel hero-profile" aria-label="Professional summary">
           <div class="profile-photo-wrap">
@@ -49,6 +56,11 @@
             <div class="profile-fact"><p class="panel-label">Based in</p><p class="panel-value">Phnom Penh, Cambodia</p></div>
           </div>
         </aside>
+      </section>
+
+      <section class="stack-strip" aria-label="Core technologies">
+        <span class="stack-label">Core stack</span>
+        <ul><li>Python</li><li>Django REST Framework</li><li>REST APIs</li><li>React.js</li><li>PHP</li><li>Laravel</li><li>APIATO</li><li>MySQL</li><li>SQLite</li></ul>
       </section>
 
       <section class="backend-pillars" aria-label="What I build">
