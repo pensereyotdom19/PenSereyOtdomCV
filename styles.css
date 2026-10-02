@@ -495,3 +495,17 @@ html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg
 .profile-photo-wrap, html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg, #f4f8ff 0, #cfe0ff 100%); isolation: isolate; }
 .profile-photo { mix-blend-mode: multiply; }
 .profile-photo-wrap::after { display: block; height: 7%; }
+
+/* Mobile hero: single column (must come after desktop hero grid rules) */
+@media (max-width: 62rem) {
+  .hero-editorial { grid-template-columns: minmax(0, 1fr) minmax(15rem, .8fr); }
+}
+@media (max-width: 48rem) {
+  .hero-editorial { grid-template-columns: minmax(0, 1fr); }
+  .hero-profile { justify-self: stretch; max-width: 22rem; }
+  .status-pill { border-radius: 1rem; }
+  .hero-actions .button { flex: 1 1 auto; }
+}
+@media (max-width: 48rem) {
+  .hero-editorial { padding-left: var(--side); padding-right: var(--side); }
+}
