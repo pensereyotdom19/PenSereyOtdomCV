@@ -482,3 +482,11 @@ html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg
 .profile-photo { transform: scale(1.2); transform-origin: 50% 22%; }
 .profile-photo { transform: scale(1.08); transform-origin: 50% 30%; object-position: center 22%; }
 .profile-photo-wrap::after { height: 12%; }
+
+/* Clear headshot: natural, larger, no blending */
+.hero-editorial { grid-template-columns: minmax(0, 1.2fr) minmax(17rem, .8fr); }
+.profile-photo-wrap { background: #f4f7fb; }
+.profile-photo-wrap::after { display: none; }
+.profile-photo { aspect-ratio: 4 / 5; filter: none; mix-blend-mode: normal; object-position: center 8%; transform: none; }
+.hero-profile { justify-self: end; max-width: 24rem; width: 100%; }
+@media (max-width: 48rem) { .hero-profile { justify-self: stretch; max-width: 26rem; } }
