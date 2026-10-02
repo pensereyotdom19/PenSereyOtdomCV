@@ -471,3 +471,14 @@ html[data-theme="dark"] .contact-section { box-shadow: 0 0 0 1px var(--line), 0 
   .contact-section h2 { max-width: none; }
 }
 @media (max-width: 30rem) { .contact-list li { grid-template-columns: 1fr; gap: .2rem; } }
+
+/* Headshot integration */
+.profile-photo-wrap { background: linear-gradient(180deg, #f3f7ff 0, #d3e2ff 100%); isolation: isolate; }
+.profile-photo { mix-blend-mode: multiply; filter: contrast(1.04) saturate(1.02); object-position: center 10%; }
+.profile-photo-wrap::after { background: linear-gradient(180deg, transparent 0, var(--panel) 100%); bottom: 0; content: ""; height: 28%; left: 0; pointer-events: none; position: absolute; right: 0; }
+html[data-theme="light"] .profile-photo-wrap::after { background: linear-gradient(180deg, transparent 0, #10253f 100%); }
+html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg, #e6efff 0, #b9d1ff 100%); }
+.profile-photo-wrap { overflow: hidden; }
+.profile-photo { transform: scale(1.2); transform-origin: 50% 22%; }
+.profile-photo { transform: scale(1.08); transform-origin: 50% 30%; object-position: center 22%; }
+.profile-photo-wrap::after { height: 12%; }
