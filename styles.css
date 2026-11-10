@@ -503,3 +503,44 @@ html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg
 @media (max-width: 48rem) {
   .hero-editorial { padding-left: var(--side); padding-right: var(--side); }
 }
+
+/* Palette: graphite, bone white, mint green */
+html[data-theme="dark"] {
+  --bg: #17191c; --bg-deep: #1c1f23; --surface: #1d2024; --surface-soft: #25292e; --panel: #202327;
+  --ink: #ede8df; --muted: #a39f97; --line: rgba(237, 232, 223, .14);
+  --accent: #3ddc97; --accent-bright: #3ddc97; --accent-2: #3ddc97; --success: #3ddc97;
+  --glow: rgba(61, 220, 151, .1);
+}
+html[data-theme="dark"] body { background: radial-gradient(ellipse at 15% 0%, rgba(61, 220, 151, .07), transparent 38rem), var(--bg); }
+html[data-theme="dark"] .site-header { background: rgba(23, 25, 28, .86); }
+html[data-theme="dark"] .header-cv, html[data-theme="dark"] .button-primary { box-shadow: 0 .45rem 1.2rem rgba(61, 220, 151, .16); color: #10241b; }
+html[data-theme="dark"] .header-cv:hover, html[data-theme="dark"] .button-primary:hover { background: #6be8b3; color: #10241b; }
+html[data-theme="dark"] .status-pill { --success: #3ddc97; }
+html[data-theme="dark"] .availability-dot { box-shadow: 0 0 0 .22rem rgba(61, 220, 151, .14); }
+html[data-theme="dark"] .h1-accent { background: none; color: var(--ink); -webkit-text-fill-color: var(--ink); }
+html[data-theme="dark"] .pillar-number { background: rgba(61, 220, 151, .14); color: var(--accent); }
+html[data-theme="dark"] .hero-profile .panel-label,
+html[data-theme="dark"] .project-card-featured .project-index,
+html[data-theme="dark"] .project-card-featured .case-study span,
+html[data-theme="dark"] .contact-section .eyebrow,
+html[data-theme="dark"] .contact-list span:first-child,
+html[data-theme="dark"] .contact-list a:hover { color: var(--accent); }
+html[data-theme="dark"] .hero-profile .panel-value,
+html[data-theme="dark"] .project-card-featured,
+html[data-theme="dark"] .suitebook-case-study p,
+html[data-theme="dark"] .contact-section,
+html[data-theme="dark"] .contact-list a, html[data-theme="dark"] .contact-list b,
+html[data-theme="dark"] .contact-email, html[data-theme="dark"] .contact-linkedin { color: var(--ink); }
+html[data-theme="dark"] .project-card-featured .project-topline, html[data-theme="dark"] .project-card-featured p,
+html[data-theme="dark"] .contact-section > p:not(.eyebrow), html[data-theme="dark"] .contact-details,
+html[data-theme="dark"] .contact-lede { color: #c9c4ba; }
+html[data-theme="dark"] .suitebook-case-study p { color: var(--ink); }
+html[data-theme="dark"] .suitebook-case-study > div, html[data-theme="dark"] .contact-list li, html[data-theme="dark"] .contact-list li:last-child { border-color: var(--line); }
+html[data-theme="dark"] .technology-tags li { background: rgba(61, 220, 151, .1); border-color: rgba(61, 220, 151, .28); color: var(--ink); }
+html[data-theme="dark"] .contact-section { background: linear-gradient(135deg, #23282c, #17191c 70%); }
+html[data-theme="dark"] .contact-section .button-secondary { border-color: rgba(237, 232, 223, .45); color: var(--ink); }
+html[data-theme="dark"] .contact-section .button-secondary:hover { background: var(--ink); border-color: var(--ink); color: #17191c; }
+html[data-theme="dark"] .profile-photo-wrap { background: linear-gradient(180deg, #f5f1e9 0, #ddd6c8 100%); }
+html[data-theme="dark"] .hero-editorial h1 .h1-line { color: var(--ink); -webkit-text-fill-color: var(--ink); }
+html[data-theme="dark"] .hero-editorial h1 .h1-accent span { color: var(--accent); -webkit-text-fill-color: var(--accent); }
+html[data-theme="dark"] .backend-pillars { background: transparent; }
