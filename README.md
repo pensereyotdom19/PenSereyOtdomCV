@@ -2,7 +2,7 @@
 
 Static site, no build step and no dependencies: `index.html`, `styles.css`, `script.js`.
 
-Live at https://pensereyotdom-portfolio.vercel.app. Vercel deploys every push to `main`.
+Live at https://www.otdom.work. Vercel deploys every push to `main`.
 
 ## Preview locally
 
