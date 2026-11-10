@@ -1,224 +1,160 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#17191c" />
-    <meta name="description" content="Professional portfolio of Pen Serey Otdom, a Software Engineer focused on Python, Django REST Framework, and backend systems." />
-    <title>Pen Serey Otdom | Backend Software Engineer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Pen Serey Otdom · Backend Software Engineer</title>
+    <meta name="description" content="Backend software engineer in Phnom Penh. I build the booking, payment, and settlement backend for a hotel management platform using Python and Django REST Framework." />
+    <link rel="canonical" href="https://pensereyotdom-portfolio.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pensereyotdom-portfolio.vercel.app/" />
+    <meta property="og:title" content="Pen Serey Otdom · Backend Software Engineer" />
+    <meta property="og:description" content="I build the booking, payment, and settlement backend for a hotel management platform using Python and Django REST Framework." />
+    <meta property="og:image" content="https://pensereyotdom-portfolio.vercel.app/headshot.jpg" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Pen Serey Otdom home">PSO<span>.</span></a>
-      <nav id="site-menu" aria-label="Main navigation">
-        <a data-section-link href="#about">About</a>
-        <a data-section-link href="#skills">Skills</a>
-        <a data-section-link href="#experience">Experience</a>
-        <a data-section-link href="#projects">Projects</a>
-        <a data-section-link href="#contact">Contact</a>
+      <a class="site-name" href="#top">Pen Serey Otdom</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="PenSereyOtdom.pdf" download>CV</a>
       </nav>
-      <div class="header-actions">
-        <a class="header-cv" href="PenSereyOtdom.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false"><span class="sr-only">Open navigation</span><span aria-hidden="true">Menu</span></button>
-      </div>
     </header>
 
     <main id="main">
-      <section class="hero hero-editorial" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy hero-identity">
-          <p class="eyebrow status-pill"><span class="availability-dot" aria-hidden="true"></span> Open to backend opportunities · Phnom Penh, Cambodia</p>
-          <p class="hero-hi">Hi, I’m <strong>Pen Serey Otdom</strong> —</p>
-          <h1 id="hero-title"><span class="h1-line">Software</span><span class="h1-line h1-accent">Engineer<span>.</span></span></h1>
-          <p class="hero-role">Backend-focused Software Engineer building <strong>reliable APIs</strong>, <strong>business workflows</strong>, and web applications with Python and Django REST Framework.</p>
-          <p class="hero-summary">I turn complex operational requirements into practical software for hotel management, property platforms, and internal business tools.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="PenSereyOtdom.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-            <a class="button button-secondary" href="#projects">View selected work <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          </div>
-          <dl class="hero-stats" aria-label="Career summary">
-            <div><dt>7</dt><dd>Years of experience</dd></div>
-            <div><dt>2</dt><dd>Companies</dd></div>
-            <div><dt>6</dt><dd>Projects</dd></div>
+      <section class="intro" id="top">
+        <div>
+          <h1>Pen Serey Otdom</h1>
+          <p class="lead">I build the booking, payment, and settlement backend for a hotel management platform.</p>
+          <p>I’m a backend software engineer with 7 years of experience building transactional business systems in Python (Django REST Framework) and PHP (Laravel). I’m used to debugging production issues in money-handling workflows, where correctness matters.</p>
+          <p class="availability">Open to backend roles. Based in Phnom Penh, Cambodia.</p>
+          <p class="intro-links">
+            <a class="button" href="PenSereyOtdom.pdf" download>Download CV</a>
+            <a href="mailto:pensereyotdom19@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/pensereyotdom19" target="_blank" rel="noreferrer">GitHub</a>
+          </p>
+        </div>
+        <img class="headshot" src="headshot.jpg" alt="Portrait of Pen Serey Otdom" width="480" height="600" />
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Work</h2>
+        <div class="section-body">
+          <article class="job">
+            <header>
+              <h3>Squeeze Asia</h3>
+              <p class="meta">Software Engineer · May 2022 – Present</p>
+            </header>
+            <p>I develop core services for suitebook, a hotel management platform: bookings, payments and refunds, kiosk and QR checkout, account settlement, and channel manager integrations. The stack is Python with Django REST Framework, React.js, and MySQL.</p>
+
+            <h4>Three pieces of work I’d point to</h4>
+            <ol class="notes">
+              <li>
+                <h5>Refunds as offsetting entries</h5>
+                <p>I designed refund handling so a refund is recorded as a new negative payment entry. The original payment record is never changed. That keeps the payment ledger auditable and keeps settlement totals consistent across properties.</p>
+              </li>
+              <li>
+                <h5>Per-property kiosk configuration</h5>
+                <p>Buildings needed different kiosk search behavior. I built the configuration as bitmask flags per property, so a building can customize its behavior without a schema change or a redeploy.</p>
+              </li>
+              <li>
+                <h5>Channel manager sync failures</h5>
+                <p>Inventory and rate sync with the channel manager (site controller) was failing for some properties. I traced it to mismatched OTA account IDs and room type codes, and resolving those restored the sync.</p>
+              </li>
+            </ol>
+
+            <h4>Day to day</h4>
+            <ul>
+              <li>Develop and maintain room booking, guest management, IC card activation, account settlement and unsettlement, kiosk payment, and QR payment workflows.</li>
+              <li>Design and implement REST APIs for the frontend and for third-party integrations.</li>
+              <li>Build and improve React.js interface components.</li>
+              <li>Work with the PM, SQA, and engineering teams to ship stable releases.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <header>
+              <h3>A2A</h3>
+              <p class="meta">Software Engineer · Nov 2019 – Apr 2022</p>
+            </header>
+            <p>Backend development in PHP with Laravel and the APIATO architecture.</p>
+            <dl class="projects">
+              <div><dt>Land Map</dt><dd>Backend APIs for a property platform covering listing, buying, selling, and renting. I designed the database structures and transaction workflows.</dd></div>
+              <div><dt>Minami Dictionary</dt><dd>Backend services for a Khmer-Japanese language-learning mobile app, including search and data retrieval performance work.</dd></div>
+              <div><dt>TM Matching System</dt><dd>An internal platform that automates business matching processes.</dd></div>
+            </dl>
+          </article>
+
+          <article class="job">
+            <header>
+              <h3>Earlier projects</h3>
+              <p class="meta">2017 – 2019</p>
+            </header>
+            <dl class="projects">
+              <div><dt>A2A Odoo Renovation</dt><dd>Migrated an ERP system to a newer Odoo version while keeping data integrity and system continuity. Mar – Oct 2019.</dd></div>
+              <div><dt>Resort Booking System</dt><dd>Backend for booking accommodation and activities at vKirirom Pine Resort. Jul 2018 – Mar 2019.</dd></div>
+              <div><dt>Smart Check-in/Check-out</dt><dd>A QR-based mobile room access and check-in system for vKirirom Pine Resort. Jul 2017 – Apr 2018.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="section-body">
+          <dl class="facts">
+            <div><dt>Languages</dt><dd>Python, PHP, JavaScript, HTML, CSS</dd></div>
+            <div><dt>Frameworks</dt><dd>Django REST Framework, Laravel, APIATO, React.js</dd></div>
+            <div><dt>Databases</dt><dd>MySQL, SQLite</dd></div>
+            <div><dt>Strengths</dt><dd>REST API design, relational data modeling, API integration, debugging production issues</dd></div>
+            <div><dt>AI tools</dt><dd>Claude and Codex, used daily for debugging, code review, and documentation</dd></div>
+            <div><dt>Spoken</dt><dd>Khmer (native), English (professional)</dd></div>
           </dl>
         </div>
-        <aside class="hero-panel hero-profile" aria-label="Professional summary">
-          <div class="profile-photo-wrap">
-            <img class="profile-photo" src="pen-serey-otdom-headshot.jpeg" alt="Pen Serey Otdom" />
-          </div>
-          <div class="profile-facts">
-            <div class="profile-fact"><p class="panel-label">Specialism</p><p class="panel-value">Backend / Python / Django REST Framework</p></div>
-            <div class="profile-fact"><p class="panel-label">Experience</p><p class="panel-value">7 years building web applications</p></div>
-            <div class="profile-fact"><p class="panel-label">Based in</p><p class="panel-value">Phnom Penh, Cambodia</p></div>
-          </div>
-        </aside>
       </section>
 
-      <section class="stack-strip" aria-label="Core technologies">
-        <span class="stack-label">Core stack</span>
-        <ul><li>Python</li><li>Django REST Framework</li><li>REST APIs</li><li>React.js</li><li>PHP</li><li>Laravel</li><li>APIATO</li><li>MySQL</li><li>SQLite</li></ul>
-      </section>
-
-      <section class="backend-pillars" aria-label="What I build">
-        <article><span class="pillar-number">01</span><div><h2>Business APIs</h2><p>Backend services and business logic for day-to-day operations.</p></div></article>
-        <article><span class="pillar-number">02</span><div><h2>System integration</h2><p>Connecting workflows across web, kiosk, and payment-related features.</p></div></article>
-        <article><span class="pillar-number">03</span><div><h2>Workflow automation</h2><p>Turning operational requirements into reliable software flows.</p></div></article>
-      </section>
-
-      <section class="section section-about" id="about" aria-labelledby="about-title">
-        <div class="section-label">01 / About</div>
+      <section id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
         <div class="section-body">
-          <h2 id="about-title">I turn business workflows into dependable software.</h2>
-          <div class="about-copy">
-            <p>Backend Software Engineer with 7 years of experience building transactional business systems in Python (Django REST Framework) and PHP (Laravel). At Squeeze Asia, develops core services for suitebook, a hotel management platform, covering bookings, payments and refunds, kiosk and QR checkout, account settlement, and channel manager integrations.</p>
-            <p>Skilled in REST API design, relational data modeling, and debugging production issues in money-handling workflows where correctness matters. Full-stack capable with React.js, and uses AI coding tools (Claude, Codex) daily for debugging, code review, and documentation.</p>
-          </div>
-          <div class="about-highlights" aria-label="Core strengths">
-            <div><span>Build</span><p>Backend services and REST APIs</p></div>
-            <div><span>Solve</span><p>Complex business workflows</p></div>
-            <div><span>Deliver</span><p>Reliable, practical software</p></div>
-          </div>
+          <p><strong>Bachelor’s in Software Engineering</strong><br />Kirirom Institute of Technology, 2015 – 2019</p>
         </div>
       </section>
 
-      <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="section-label">02 / Technical skills</div>
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
         <div class="section-body">
-          <h2 id="skills-title">A practical, backend-centered toolkit.</h2>
-          <div class="skills-grid">
-            <article class="skill-group">
-              <h3>Backend</h3>
-              <ul><li>Python</li><li>Django REST Framework</li><li>PHP</li><li>Laravel</li><li>APIATO</li></ul>
-            </article>
-            <article class="skill-group">
-              <h3>Web applications</h3>
-              <ul><li>React.js</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>Responsive UI</li></ul>
-            </article>
-            <article class="skill-group">
-              <h3>Data &amp; integration</h3>
-              <ul><li>MySQL</li><li>SQLite</li><li>Database design</li><li>REST APIs</li><li>API integration</li></ul>
-            </article>
-            <article class="skill-group">
-              <h3>How I work</h3>
-              <ul><li>System design</li><li>Workflow automation</li><li>Troubleshooting</li><li>Agile development</li><li>Code review</li></ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="experience" aria-labelledby="experience-title">
-        <div class="section-label">03 / Experience</div>
-        <div class="section-body">
-          <h2 id="experience-title">Professional experience</h2>
-          <ol class="timeline experience-ledger">
-            <li class="timeline-entry">
-              <div class="timeline-meta"><span>May 2022 – Present</span><span>Phnom Penh, Cambodia</span></div>
-              <div>
-                <h3>Squeeze Asia <span>— Software Engineer</span></h3>
-                <p>Developing and maintaining suitebook, a hotel management system. My work includes REST APIs, business logic, payment and refund workflows, kiosk-related features, and responsive React.js interfaces. I work closely with product, SQA, and engineering teams to deliver stable solutions.</p>
-              </div>
-            </li>
-            <li class="timeline-entry">
-              <div class="timeline-meta"><span>Nov 2019 – Apr 2022</span><span>Phnom Penh, Cambodia</span></div>
-              <div>
-                <h3>A2A <span>— Software Engineer</span></h3>
-                <p>Built backend APIs and internal business tools using PHP, Laravel, and APIATO. The work covered property platforms, a language-learning application, business matching workflows, and data-focused services.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-label">04 / Selected projects</div>
-        <div class="section-body">
-          <div class="section-heading section-intro"><h2 id="projects-title">Backend work, explained clearly.</h2><p>High-level case studies show the problem area, engineering focus, and technology without exposing sensitive implementation or company details.</p></div>
-          <div class="project-grid">
-            <article class="project-card project-card-featured">
-              <div class="project-topline"><span class="project-index">Featured case study</span><span>Hotel management system</span></div>
-              <h3>suitebook</h3>
-              <p class="project-featured-summary">A hotel management system supporting the operational workflows behind bookings, guests, settlement, and payments.</p>
-              <div class="case-study case-study-lens suitebook-case-study">
-                <div><span>Context</span><p>Hotel-management workflows for booking, guest, and account operations.</p></div>
-                <div><span>Engineering focus</span><p>Python and Django REST Framework backend features, REST APIs, business logic, payment workflows, and React.js interfaces.</p></div>
-                <div><span>Core capabilities</span><p>Room booking, guest management, IC card activation, account settlement, kiosk payment, and QR payment handling.</p></div>
-                <div><span>Technology</span><ul class="technology-tags"><li>Python</li><li>Django REST Framework</li><li>React.js</li><li>MySQL</li><li>SQLite</li></ul></div>
-              </div>
-            </article>
-          </div>
-          <div class="project-index-block">
-            <div class="project-index-heading"><h3>Project index</h3><p>Additional systems and applications I have contributed to.</p></div>
-            <div class="project-index-grid">
-            <article class="project-card">
-              <div class="project-topline"><span class="project-index">01</span><span>Property platform</span></div>
-              <h3>Land Map</h3>
-              <p class="project-tech">PHP · Laravel · APIATO</p>
-              <p>Backend APIs and database workflows for property listing, buying, selling, and renting.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-topline"><span class="project-index">02</span><span>Mobile application</span></div>
-              <h3>Minami Dictionary</h3>
-              <p class="project-tech">PHP · Laravel · APIATO</p>
-              <p>Backend services for a Khmer-Japanese language-learning platform, focused on search and data retrieval.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-topline"><span class="project-index">03</span><span>Internal tool</span></div>
-              <h3>TM Matching System</h3>
-              <p class="project-tech">PHP · Laravel · APIATO</p>
-              <p>Backend logic for business matching processes and workflow automation.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-topline"><span class="project-index">04</span><span>Hospitality</span></div>
-              <h3>Resort Booking System</h3>
-              <p class="project-tech">Backend development</p>
-              <p>Backend functionality for accommodation, activity, and reservation workflows at vKirirom Pine Resort.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-topline"><span class="project-index">05</span><span>Hospitality</span></div>
-              <h3>Smart Check-in/Check-out</h3>
-              <p class="project-tech">QR-based mobile solution</p>
-              <p>QR-based mobile room access and check-in support for vKirirom Pine Resort.</p>
-            </article>
+          <p>Email is the best way to reach me.</p>
+          <dl class="facts">
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a href="mailto:pensereyotdom19@gmail.com">pensereyotdom19@gmail.com</a>
+                <button class="copy" type="button" data-copy="pensereyotdom19@gmail.com">Copy</button>
+                <span class="sr-only" id="copy-status" aria-live="polite"></span>
+              </dd>
             </div>
-          </div>
+            <div><dt>Phone</dt><dd><a href="tel:+85587307585">+855 87 307 585</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">serey-otdom-pen</a></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/pensereyotdom19" target="_blank" rel="noreferrer">pensereyotdom19</a></dd></div>
+            <div><dt>CV</dt><dd><a href="PenSereyOtdom.pdf" download>Download PDF</a></dd></div>
+          </dl>
         </div>
-      </section>
-
-      <section class="section" id="education" aria-labelledby="education-title">
-        <div class="section-label">05 / Education</div>
-        <div class="section-body education-card">
-          <div><p class="education-years">2015 – 2019</p><h2 id="education-title">BA in Software Engineering</h2></div>
-          <p>Kirirom Institute of Technology</p>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-copy">
-          <p class="eyebrow">06 / Contact</p>
-          <h2 id="contact-title">Let’s talk about your next backend project.</h2>
-          <p class="contact-lede">I am open to Backend, Python, and Django REST Framework opportunities.</p>
-          <div class="contact-actions">
-            <a class="button button-primary" href="mailto:pensereyotdom19@gmail.com">Email me <span aria-hidden="true">→</span></a>
-            <button class="button button-secondary" type="button" data-copy-email data-email="pensereyotdom19@gmail.com">Copy email</button>
-          </div>
-          <p class="sr-only" id="copy-status" aria-live="polite"></p>
-        </div>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:pensereyotdom19@gmail.com">pensereyotdom19@gmail.com</a></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/serey-otdom-pen-b98350112" target="_blank" rel="noreferrer">serey-otdom-pen <span aria-hidden="true">↗</span></a></li>
-          <li><span>Phone</span><a href="tel:+85587307585">087 307 585</a></li>
-          <li><span>Location</span><b>Phnom Penh, Cambodia</b></li>
-          <li><span>Résumé</span><a href="PenSereyOtdom.pdf" download>Download CV <span aria-hidden="true">↓</span></a></li>
-        </ul>
       </section>
     </main>
 
-    <footer><span>© <span id="year">2026</span> Pen Serey Otdom</span><a href="#top">Back to top ↑</a></footer>
+    <footer class="site-footer">
+      <span>© 2026 Pen Serey Otdom</span>
+      <a href="#top">Back to top</a>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
